@@ -1,8 +1,4 @@
 {
-  "files": [
-    "lib",
-    "readme.md"
-  ],
   "name": "minipac",
   "version": "0.0.0",
   "description": "Minimalistic web application bundler",
