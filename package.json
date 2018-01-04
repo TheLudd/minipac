@@ -1,0 +1,30 @@
+{
+  "files": [
+    "lib",
+    "dist",
+    "readme.md"
+  ],
+  "name": "minipac",
+  "version": "0.0.0",
+  "description": "Minimalistic web application bundler",
+  "main": "index.js",
+  "repository": "git@github.com:TheLudd/minipac.git",
+  "author": "Ludwig Magnusson <ludwig.magnusson@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@theludd/eslint-config-gaius": "^1.0.3",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-env": "^1.6.1",
+    "chai": "^4.1.2",
+    "eslint": "^4.14.0",
+    "mocha": "^4.1.0",
+    "source-map-support": "^0.5.0"
+  },
+  "scripts": {
+    "transpile": "mkdir -p dist && babel lib -d dist --source-maps",
+    "prepublish": "yarn transpile",
+    "test": "mocha"
+  }
+}
