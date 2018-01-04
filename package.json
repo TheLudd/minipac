@@ -1,7 +1,6 @@
 {
   "files": [
     "lib",
-    "dist",
     "readme.md"
   ],
   "name": "minipac",
@@ -14,17 +13,21 @@
   "private": false,
   "devDependencies": {
     "@theludd/eslint-config-gaius": "^1.0.3",
-    "babel-cli": "^6.26.0",
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-preset-env": "^1.6.1",
-    "chai": "^4.1.2",
-    "eslint": "^4.14.0",
-    "mocha": "^4.1.0",
-    "source-map-support": "^0.5.0"
+    "eslint": "^4.14.0"
   },
   "scripts": {
-    "transpile": "mkdir -p dist && babel lib -d dist --source-maps",
-    "prepublish": "yarn transpile",
-    "test": "mocha"
+    "prepublish": "yarn lint",
+    "lint": "eslint lib"
+  },
+  "dependencies": {
+    "babelify": "^8.0.0",
+    "bl": "^1.2.1",
+    "browserify": "^15.0.0",
+    "exorcist": "^1.0.0",
+    "fs-extra": "^5.0.0",
+    "less": "^2.7.3",
+    "less-plugin-npm-import": "^2.1.0",
+    "pug": "^2.0.0-rc.4",
+    "string-hash": "^1.1.3"
   }
 }
