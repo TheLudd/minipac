@@ -17,16 +17,20 @@
   },
   "scripts": {
     "prepublish": "yarn lint",
-    "lint": "eslint lib"
+    "lint": "eslint lib server.js"
   },
   "dependencies": {
     "babelify": "^8.0.0",
     "bl": "^1.2.1",
     "browserify": "^15.0.0",
+    "connect-livereload": "^0.6.0",
+    "cookie-parser": "^1.4.3",
     "exorcist": "^1.0.0",
+    "express": "^4.16.2",
     "fs-extra": "^5.0.0",
     "less": "^2.7.3",
     "less-plugin-npm-import": "^2.1.0",
+    "livereload": "^0.6.3",
     "pug": "^2.0.0-rc.4",
     "string-hash": "^1.1.3"
   }
