@@ -3,9 +3,11 @@ const { join } = require('path')
 const { createReadStream } = require('fs')
 const cookieParser = require('cookie-parser')
 
-function startServer (opts) {
+function startServer (inputOpts) {
+  const opts = Object.assign({ customRoutes: [] }, inputOpts)
   const {
     allowSourceMaps,
+    customRoutes,
     baseDir,
     getRootPath,
     livereload,
@@ -13,6 +15,10 @@ function startServer (opts) {
   } = opts
 
   const app = express()
+
+  customRoutes.forEach(({ method, route, handler }) => {
+    app[method](route, handler)
+  })
 
   app.get(/.*.map/, (req, res, next) => {
     if (allowSourceMaps) {
