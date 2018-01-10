@@ -15,6 +15,7 @@ function startServer (inputOpts) {
   } = opts
 
   const app = express()
+  app.use(cookieParser())
 
   customRoutes.forEach(({ method, route, handler }) => {
     app[method](route, handler)
@@ -36,7 +37,6 @@ function startServer (inputOpts) {
   }
 
   app.use(express.static(baseDir))
-  app.use(cookieParser())
 
   app.get(/.*/, (req, res) => {
     res.header('Content-Type', 'text/html')
