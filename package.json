@@ -16,14 +16,14 @@
     "lint": "eslint lib server.js"
   },
   "dependencies": {
-    "babelify": "^8.0.0",
+    "babelify": "^10.0.0",
     "bl": "^1.2.1",
-    "browserify": "^15.0.0",
+    "browserify": "^16.2.2",
     "connect-livereload": "^0.6.0",
     "cookie-parser": "^1.4.3",
     "envify": "^4.1.0",
-    "exorcist": "^1.0.0",
-    "express": "^4.16.2",
+    "exorcist": "^1.0.1",
+    "express": "^4.16.3",
     "fs-extra": "^5.0.0",
     "less": "^2.7.3",
     "less-plugin-npm-import": "^2.1.0",
