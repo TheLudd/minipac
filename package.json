@@ -16,6 +16,9 @@
     "lint": "eslint lib server.js"
   },
   "dependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
     "babelify": "^10.0.0",
     "bl": "^3.0.0",
     "browserify": "^16.2.3",
