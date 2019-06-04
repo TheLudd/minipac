@@ -21,7 +21,7 @@ function startServer (inputOpts) {
     app[method](route, handler)
   })
 
-  app.get(/.*.map/, (req, res, next) => {
+  app.get(/.*.map/, (_, res, next) => {
     if (allowSourceMaps) {
       next()
     } else {
