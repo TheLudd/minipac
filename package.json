@@ -19,6 +19,8 @@
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.4.4",
+    "babel-plugin-add-module-exports": "^1.0.2",
     "babelify": "^10.0.0",
     "bl": "^3.0.0",
     "browserify": "^16.2.3",
