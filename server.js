@@ -54,24 +54,25 @@ function startServer (inputOpts) {
 
   function startApp () {
     return new Promise((resolve, reject) => {
-      app.listen(port, (e, res) => {
+      const server = app.listen(port, (e) => {
         if (e != null) {
           reject(e)
         } else {
-          resolve(res)
+          resolve(server)
         }
       })
     })
   }
 
   return startApp()
-    .then(() => {
+    .then((server) => {
       if (livereload) {
         // eslint-disable-next-line global-require
         const lr = require('livereload')
         const lrserver = lr.createServer()
         lrserver.watch(baseDir)
       }
+      return server
     })
 }
 
