@@ -36,7 +36,11 @@ function startServer (inputOpts) {
     }))
   }
 
-  app.use(express.static(baseDir))
+  app.get(/\./, express.static(baseDir, {
+    fallthrough: false,
+    immutable: true,
+    maxAge: 60 * 60 * 24 * 365,
+  }))
 
   app.get(/.*/, (req, res) => {
     res.header('Content-Type', 'text/html')
