@@ -9,11 +9,17 @@
   "private": false,
   "devDependencies": {
     "@theludd/eslint-config-gaius": "^2.0.4",
-    "eslint": "^5.16.0"
+    "chai": "^4.2.0",
+    "eslint": "^5.16.0",
+    "mocha": "^6.1.4",
+    "source-map-support": "^0.5.12"
   },
   "scripts": {
     "prepublish": "yarn lint",
-    "lint": "eslint lib server.js"
+    "lint": "eslint lib server.js",
+    "unit": "mocha",
+    "pretest": "yarn",
+    "test": "yarn unit"
   },
   "dependencies": {
     "@babel/core": "^7.4.5",
