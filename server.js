@@ -38,7 +38,6 @@ function startServer (inputOpts) {
 
   app.get(/\./, express.static(baseDir, {
     fallthrough: false,
-    maxAge: 60 * 60 * 24 * 365,
   }))
 
   app.get(/.*/, (req, res) => {
