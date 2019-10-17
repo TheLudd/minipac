@@ -1,6 +1,6 @@
 {
   "name": "minipac",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Minimalistic web application bundler",
   "main": "index.js",
   "repository": "git@github.com:TheLudd/minipac.git",
