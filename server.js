@@ -42,7 +42,7 @@ function startServer (inputOpts) {
 
   app.get(/.*/, (req, res) => {
     res.header('Content-Type', 'text/html')
-    getRootPath(req)
+    getRootPath(req, res)
       .then((file) => {
         createReadStream(join(baseDir, file))
           .on('error', (e) => res.status(500).end(e))
