@@ -39,6 +39,7 @@
     "less": "^2.7.3",
     "less-plugin-npm-import": "^2.1.0",
     "livereload": "^0.8.2",
+    "multipipe": "^4.0.0",
     "pug": "^2.0.4",
     "ramda": "^0.26.1",
     "string-hash": "^1.1.3",
