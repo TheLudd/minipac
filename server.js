@@ -1,7 +1,7 @@
-const express = require('express')
-const { join } = require('path')
-const { createReadStream } = require('fs')
-const cookieParser = require('cookie-parser')
+import express from 'express'
+import { join } from 'path'
+import { createReadStream } from 'fs'
+import cookieParser from 'cookie-parser'
 
 function startServer (inputOpts) {
   const opts = Object.assign({ customRoutes: [] }, inputOpts)
@@ -74,4 +74,4 @@ function startServer (inputOpts) {
     })
 }
 
-module.exports = { startServer }
+export { startServer }
