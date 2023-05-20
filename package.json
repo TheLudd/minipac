@@ -1,8 +1,9 @@
 {
   "name": "minipac",
   "version": "2.2.4",
+  "type": "module",
   "description": "Minimalistic web application bundler",
-  "main": "index.js",
+  "main": "dist/minipac.cjs",
   "repository": "git@github.com:TheLudd/minipac.git",
   "author": "Ludwig Magnusson <ludwig.magnusson@gmail.com>",
   "license": "MIT",
@@ -12,13 +13,13 @@
     "chai": "^4.2.0",
     "eslint": "^8.41.0",
     "mocha": "^6.2.2",
-    "source-map-support": "^0.5.19"
+    "@esbuild-kit/cjs-loader": "^2.4.2"
   },
   "scripts": {
+    "transpile": "esbuild index.js --bundle --platform=node --packages=external --outfile=dist/minipac.cjs",
     "prepublish": "yarn lint",
     "lint": "eslint lib server.js",
     "unit": "mocha",
-    "pretest": "yarn",
     "test": "yarn unit"
   },
   "dependencies": {

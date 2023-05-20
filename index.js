@@ -1,1 +1,2 @@
-module.exports = require('./lib/bundle-project')
+import bundleProject from './lib/bundle-project.js'
+export default bundleProject
