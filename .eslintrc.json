@@ -1,3 +1,7 @@
 {
-  "extends": "@theludd/eslint-config-gaius"
+  "extends": "@yafu/eslint-config-yafu",
+  "rules": {
+    "import/extensions": "off",
+    "prefer-object-spread": "off"
+  }
 }

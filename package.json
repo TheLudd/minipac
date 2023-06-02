@@ -8,9 +8,9 @@
   "license": "MIT",
   "private": false,
   "devDependencies": {
-    "@theludd/eslint-config-gaius": "^2.0.4",
+    "@yafu/eslint-config-yafu": "^1.0.0",
     "chai": "^4.2.0",
-    "eslint": "^5.16.0",
+    "eslint": "^8.41.0",
     "mocha": "^6.2.2",
     "source-map-support": "^0.5.19"
   },
