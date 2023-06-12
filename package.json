@@ -1,6 +1,6 @@
 {
   "name": "minipac",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "private": false,
   "description": "Minimalistic web application bundler",
   "repository": "git@github.com:TheLudd/minipac.git",
