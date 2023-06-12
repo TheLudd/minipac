@@ -22,7 +22,7 @@
   "scripts": {
     "clean": "rm -rf dist",
     "transpile": "esbuild index.js --bundle --platform=node --packages=external --outfile=dist/minipac.cjs && esbuild server.js --bundle --platform=node --packages=external --outfile=dist/minipac-server.cjs",
-    "prepublish": "yarn lint && yarn clean && yarn transpile",
+    "prepublishOnly": "yarn lint && yarn clean && yarn transpile",
     "lint": "eslint lib server.js",
     "unit": "mocha",
     "test": "yarn unit"
