@@ -12,6 +12,12 @@
     "./server": "./dist/minipac-server.cjs"
   },
   "main": "./dist/minipac.cjs",
+  "files": [
+    "dist",
+    "lib",
+    "server.js",
+    "index.js"
+  ],
   "scripts": {
     "clean": "rm -rf dist",
     "lint": "eslint lib server.js",
