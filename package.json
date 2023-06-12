@@ -7,7 +7,7 @@
   "author": "Ludwig Magnusson <ludwig.magnusson@gmail.com>",
   "license": "MIT",
   "private": false,
-  "main": "dist/minipac.cjs",
+  "main": "./dist/minipac.cjs",
   "exports": {
     ".": "./dist/minipac.cjs",
     "./server": "./dist/minipac-server.cjs"
@@ -20,8 +20,9 @@
     "@esbuild-kit/cjs-loader": "^2.4.2"
   },
   "scripts": {
+    "clean": "rm -rf dist",
     "transpile": "esbuild index.js --bundle --platform=node --packages=external --outfile=dist/minipac.cjs && esbuild server.js --bundle --platform=node --packages=external --outfile=dist/minipac-server.cjs",
-    "prepublish": "yarn lint",
+    "prepublish": "yarn lint && yarn clean && yarn transpile",
     "lint": "eslint lib server.js",
     "unit": "mocha",
     "test": "yarn unit"
