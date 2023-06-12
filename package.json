@@ -1,31 +1,24 @@
 {
   "name": "minipac",
   "version": "3.0.2",
-  "type": "module",
+  "private": false,
   "description": "Minimalistic web application bundler",
   "repository": "git@github.com:TheLudd/minipac.git",
-  "author": "Ludwig Magnusson <ludwig.magnusson@gmail.com>",
   "license": "MIT",
-  "private": false,
-  "main": "./dist/minipac.cjs",
+  "author": "Ludwig Magnusson <ludwig.magnusson@gmail.com>",
+  "type": "module",
   "exports": {
     ".": "./dist/minipac.cjs",
     "./server": "./dist/minipac-server.cjs"
   },
-  "devDependencies": {
-    "@yafu/eslint-config-yafu": "^1.0.0",
-    "chai": "^4.2.0",
-    "eslint": "^8.41.0",
-    "mocha": "^6.2.2",
-    "@esbuild-kit/cjs-loader": "^2.4.2"
-  },
+  "main": "./dist/minipac.cjs",
   "scripts": {
     "clean": "rm -rf dist",
-    "transpile": "esbuild index.js --bundle --platform=node --packages=external --outfile=dist/minipac.cjs && esbuild server.js --bundle --platform=node --packages=external --outfile=dist/minipac-server.cjs",
-    "prepublishOnly": "yarn lint && yarn clean && yarn transpile",
     "lint": "eslint lib server.js",
-    "unit": "mocha",
-    "test": "yarn unit"
+    "prepublishOnly": "yarn lint && yarn clean && yarn transpile",
+    "test": "yarn unit",
+    "transpile": "esbuild index.js --bundle --platform=node --packages=external --outfile=dist/minipac.cjs && esbuild server.js --bundle --platform=node --packages=external --outfile=dist/minipac-server.cjs",
+    "unit": "mocha"
   },
   "dependencies": {
     "@babel/core": "^7.20.2",
@@ -55,5 +48,12 @@
     "string-hash": "^1.1.3",
     "watchify": "^3.11.1",
     "yafu": "^1.1.0"
+  },
+  "devDependencies": {
+    "@esbuild-kit/cjs-loader": "^2.4.2",
+    "@yafu/eslint-config-yafu": "^1.0.0",
+    "chai": "^4.2.0",
+    "eslint": "^8.41.0",
+    "mocha": "^6.2.2"
   }
 }
